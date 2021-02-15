@@ -4,10 +4,14 @@ Librairies
 <details>
 adri_oled1306                   = https://github.com/AdriLighting/adri_oled1306
 
-esp8266/arduino                 = https://github.com/esp8266/Arduino/tree/master/libraries
-
 Adafruit BusIO                  = https://github.com/adafruit/Adafruit_BusIO
+Adafruit SSD1306                = https://github.com/adafruit/Adafruit_SSD1306
 Adafruit GFX Library            = https://github.com/adafruit/Adafruit-GFX-Library
+
+framework                       = https://github.com/esp8266/Arduino/tree/master/libraries
+Wire                            = 
+SPI                             = 
+
 </details>
 Dependency Graph
 <details>
@@ -35,4 +39,25 @@ Dependency Graph
 |   |-- [Wire] 1.0</details>
 </pre>
 
+<hr>
 
+#### examples
+
+adri_oled1306
+<details>
+<pre>
+platformio.ini
+<details>
+[env:nodemcuv2]
+platform=espressif8266
+board=nodemcuv2
+framework=arduino
+lib_deps=Adafruit BusIO, Wire
+lib_extra_dirs= ${env.lib_extra_dirs}
+[platformio]
+src_dir= ${env.src_dir}
+
+</details>
+</pre>
+</details>
+<hr>
